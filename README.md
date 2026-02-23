@@ -28,7 +28,6 @@ Fournis donc les règles de gestion et le dictionnaire de données.
 
 ##
 
-
 ### Règles de gestion (métier)
 - La plateforme gère des comptes utilisateurs identifiés par un email et un pseudo.
 - Un utilisateur possède un statut de compte (actif / suspendu / désactivé).
