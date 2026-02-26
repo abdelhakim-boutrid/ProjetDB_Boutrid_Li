@@ -45,7 +45,7 @@ Fournis donc les règles de gestion et le dictionnaire de données.
 
 ---
 
-### Dictionnaire de données brutes (35 données)
+### Dictionnaire de données (35 données)
 | Signification de la donnée | Type | Taille |
 |---|---:|---:|
 | Identifiant utilisateur | INT | 10 chiffres |
