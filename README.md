@@ -45,6 +45,7 @@ Fournis donc les règles de gestion et le dictionnaire de données.
 
 ---
 
+
 ### Dictionnaire de données (35 données)
 | Signification de la donnée | Type | Taille |
 |---|---:|---:|
@@ -87,6 +88,7 @@ Fournis donc les règles de gestion et le dictionnaire de données.
 > Note : le MCD contient aussi certains attributs techniques supplémentaires (ex. hash_mdp, date_inscription, statut_compte) qui ne sont pas obligatoires dans la limite 25–35 du dictionnaire.
 
 ---
+
 
 ## Étape 2 — MCD
 
