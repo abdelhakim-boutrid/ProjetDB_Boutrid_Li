@@ -114,3 +114,4 @@ MLD :
 - AJOUTER = (#id_utilisateur, #id_playlist, #(id_album, numero_piste), date_heure_ajout VARCHAR(50), position_ VARCHAR(50));
 - ECOUTER = (#id_utilisateur, #(id_album, numero_piste), date_heure_ecoute VARCHAR(50), duree_ecoutee VARCHAR(50), type_appareil VARCHAR(50));
 
+---
