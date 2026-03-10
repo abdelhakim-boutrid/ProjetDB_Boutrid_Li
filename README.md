@@ -101,8 +101,8 @@ Fournis donc les règles de gestion et le dictionnaire de données.
 - Association récursive : **GENRE_PARENT** (hiérarchie de genres)
 
 
-## PART 2
-MLD :
+# PART 2
+##MLD :
 - id_utilisateur = (id_utilisateur VARCHAR(50), pseudo VARCHAR(50), email VARCHAR(50), hash_mdp VARCHAR(50), date_inscription VARCHAR(50), statut_compte VARCHAR(50));
 - OFFRE_ABONNEMENT = (id_offre VARCHAR(50), nom_offre VARCHAR(50), prix_mensuel VARCHAR(50), devise VARCHAR(50), qualite_audio_max VARCHAR(50), pub_incluse VARCHAR(50), nb_appareils_max VARCHAR(50));
 - ABONNEMENT = (id_abonnement VARCHAR(50), date_debut VARCHAR(50), date_fin VARCHAR(50), statut_abonnement VARCHAR(50), #id_offre, #id_utilisateur);
