@@ -115,3 +115,11 @@ Fournis donc les règles de gestion et le dictionnaire de données.
 - ECOUTER = (#id_utilisateur, #(id_album, numero_piste), date_heure_ecoute VARCHAR(50), duree_ecoutee VARCHAR(50), type_appareil VARCHAR(50));
 
 ---
+
+## V. Scénario d'utilisation
+**Rôle :** Responsable Marketing de la plateforme de streaming.
+**Objectif :** Analyser les tendances d'écoute pour optimiser les abonnements et proposer des contenus adaptés.
+**Données à extraire :** - Liste des utilisateurs premium actifs.
+- Statistiques des artistes les plus populaires.
+- Analyse des playlists collaboratives les plus remplies.
+- Historique d'écoute par type d'appareil.
