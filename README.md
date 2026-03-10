@@ -99,3 +99,6 @@ Fournis donc les règles de gestion et le dictionnaire de données.
 - Entité faible : **PISTE** identifiée par (**id_album**, **numero_piste**) via l’association CONTENIR
 - Association n-aire : **AJOUTER** (UTILISATEUR + PLAYLIST + PISTE) avec (date_heure_ajout, position)
 - Association récursive : **GENRE_PARENT** (hiérarchie de genres)
+
+
+## PART 2
