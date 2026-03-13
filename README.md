@@ -1,7 +1,7 @@
 # ProjetDB_Boutrid_Li — Mini-projet MERISE (Streaming musical)
 
 ## Domaine
-Plateforme de streaming musical (type Spotify/Deezer) avec :
+Notre projet est une plateforme de streaming musical (type Spotify/Deezer/Apple Music) qui contient :
 - comptes utilisateurs
 - offres et abonnements
 - catalogue (artistes, albums, pistes, genres)
@@ -85,7 +85,7 @@ Fournis donc les règles de gestion et le dictionnaire de données.
 | Durée écoutée (secondes) | INT | 5 chiffres |
 | Type d’appareil (mobile/web/desktop…) | VARCHAR | 20 |
 
-> Note : le MCD contient aussi certains attributs techniques supplémentaires (ex. hash_mdp, date_inscription, statut_compte) qui ne sont pas obligatoires dans la limite 25–35 du dictionnaire.
+> Remarque : le MCD inclut également certains attributs techniques supplémentaires (par exemple hash_mdp, date_inscription ou statut_compte). Ceux-ci ne sont toutefois pas obligatoires dans la limite de 25 à 35 éléments du dictionnaire.
 
 ---
 
