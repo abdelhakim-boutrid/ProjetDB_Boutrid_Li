@@ -117,16 +117,27 @@ Fournis donc les règles de gestion et le dictionnaire de données.
 
 # PARTIE 2
 ## MLD :
+
 id_utilisateur = (id_utilisateur INT, pseudo VARCHAR(50), email VARCHAR(50), hash_mdp VARCHAR(50), date_inscription DATE, statut_compte VARCHAR(50));
+
 OFFRE_ABONNEMENT = (id_offre INT, nom_offre VARCHAR(50), prix_mensuel DECIMAL(6,2), devise VARCHAR(3), qualite_audio_max VARCHAR(50), pub_incluse LOGICAL, nb_appareils_max INT);
+
 ABONNEMENT = (id_abonnement INT, date_debut DATE, date_fin DATE, statut_abonnement VARCHAR(50), #id_offre, #id_utilisateur);
+
 ARTISTE = (id_artiste INT, nom_artiste VARCHAR(50));
+
 ALBUM = (id_album INT, titre_album VARCHAR(50), date_sortie_album DATE, #id_artiste);
+
 GENRE = (id_genre INT, nom_genre VARCHAR(50), Identifiant_genre_parent_hiérarchie_ INT, #id_genre_1*);
+
 PLAYLIST = (id_playlist INT, nom_playlist VARCHAR(50), visibilite INT, collaborative LOGICAL, #id_utilisateur);
+
 PISTE = (id_album INT, numero_piste VARCHAR(50), titre_piste VARCHAR(50), duree_sec VARCHAR(50), explicite VARCHAR(50), #id_genre, #id_album_1);
-AJOUTER = (#id_utilisateur, #id_playlist, #(id_album, numero_piste), date_heure_ajout VARCHAR(50), position_ VARCHAR(50));
-ECOUTER = (#id_utilisateur, #(id_album, numero_piste), date_heure_ecoute VARCHAR(50), duree_ecoutee VARCHAR(50), type_appareil VARCHAR(50));
+
+AJOUTER = (#id_utilisateur, #id_playlist, #(id_album, numero_piste), date_heure_ajout DATETIME, position_ INT);
+
+ECOUTER = (#id_utilisateur, #(id_album, numero_piste), date_heure_ecoute DATETIME, duree_ecoutee INT, type_appareil VARCHAR(50));
+
 
 
 ---
