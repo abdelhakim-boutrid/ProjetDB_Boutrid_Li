@@ -1,5 +1,7 @@
 # ProjetDB_Boutrid_Li — Mini-projet MERISE (Streaming musical)
 
+# PARTIE 1
+
 ## Domaine
 Notre projet est une plateforme de streaming musical (type Spotify/Deezer/Apple Music) qui contient :
 - comptes utilisateurs
@@ -29,19 +31,31 @@ Fournis donc les règles de gestion et le dictionnaire de données.
 ##
 
 ### Règles de gestion (métier)
-- La plateforme gère des comptes utilisateurs identifiés par un email et un pseudo.
-- Un utilisateur possède un statut de compte (actif / suspendu / désactivé).
-- La plateforme propose des offres d’abonnement (nom, prix mensuel, devise, options).
-- Un utilisateur peut souscrire plusieurs abonnements au cours du temps.
-- Un abonnement est rattaché à une seule offre et possède une date de début, une date de fin (éventuelle) et un statut.
-- La plateforme gère des artistes qui publient des albums.
-- Un album contient des pistes ordonnées (numéro de piste).
-- Chaque piste possède un titre, une durée et un indicateur explicite.
-- Les pistes sont classées par genre ; un genre peut avoir un genre parent (hiérarchie).
-- Un utilisateur peut créer des playlists.
-- Une playlist a une visibilité (publique/privée) et peut être collaborative.
-- Dans une playlist, on mémorise l’ajout d’une piste : qui a ajouté, quand, et la position dans la playlist.
-- La plateforme enregistre l’historique d’écoute : utilisateur, piste écoutée, date/heure, durée écoutée et type d’appareil.
+- La plateforme gère des comptes utilisateurs, identifiés par une adresse email et un pseudonyme.
+
+- Chaque utilisateur possède un statut de compte (actif, suspendu ou désactivé).
+
+- La plateforme propose différentes offres d’abonnement, caractérisées par un nom, un prix mensuel, une devise et des options.
+
+- Un utilisateur peut souscrire à plusieurs abonnements au fil du temps.
+
+- Chaque abonnement est associé à une seule offre et comporte une date de début, une date de fin éventuelle ainsi qu’un statut.
+
+- La plateforme gère également des artistes qui publient des albums.
+
+- Un album est composé de plusieurs pistes, organisées selon un numéro d’ordre.
+
+- Chaque piste possède un titre, une durée et un indicateur de contenu explicite.
+
+- Les pistes sont classées par genre musical ; un genre peut être rattaché à un genre parent, formant ainsi une hiérarchie.
+
+- Les utilisateurs ont la possibilité de créer des playlists.
+
+- Une playlist possède un niveau de visibilité (publique ou privée) et peut être collaborative.
+
+- Pour chaque piste ajoutée dans une playlist, la plateforme enregistre l’utilisateur qui l’a ajoutée, la date d’ajout et sa position dans la playlist.
+
+- Enfin, la plateforme conserve un historique d’écoute, comprenant l’utilisateur, la piste écoutée, la date et l’heure de l’écoute, la durée d’écoute et le type d’appareil utilisé.
 
 ---
 
@@ -101,7 +115,7 @@ Fournis donc les règles de gestion et le dictionnaire de données.
 - Association récursive : **GENRE_PARENT** (hiérarchie de genres)
 
 
-# PART 2
+# PARTIE 2
 ## MLD :
 - id_utilisateur = (id_utilisateur VARCHAR(50), pseudo VARCHAR(50), email VARCHAR(50), hash_mdp VARCHAR(50), date_inscription VARCHAR(50), statut_compte VARCHAR(50));
 - OFFRE_ABONNEMENT = (id_offre VARCHAR(50), nom_offre VARCHAR(50), prix_mensuel VARCHAR(50), devise VARCHAR(50), qualite_audio_max VARCHAR(50), pub_incluse VARCHAR(50), nb_appareils_max VARCHAR(50));
