@@ -12,7 +12,7 @@ Notre projet est une plateforme de streaming musical (type Spotify/Deezer/Apple 
 
 ---
 
-## Étape 1 —  Analyse des besoins  (prompt IA + résultats)
+## Étape 1 — Analyse des besoins (prompt IA + résultats)
 
 ### Prompt IA utilisé
 
@@ -64,40 +64,40 @@ Fournis donc les règles de gestion et le dictionnaire de données.
 | Signification de la donnée | Type | Taille |
 |---|---:|---:|
 | Identifiant utilisateur | INT | 10 chiffres |
-| Pseudo utilisateur | VARCHAR | 30 |
-| Email utilisateur | VARCHAR | 254 |
+| Pseudo utilisateur | VARCHAR | 50 |
+| Email utilisateur | VARCHAR | 50 |
 | Identifiant offre d’abonnement | INT | 10 chiffres |
-| Nom offre | VARCHAR | 40 |
+| Nom offre | VARCHAR | 50 |
 | Prix mensuel | DECIMAL | 6,2 |
-| Devise (EUR, USD…) | CHAR | 3 |
-| Qualité audio max | VARCHAR | 10 |
+| Devise (EUR, USD…) | VARCHAR | 3 |
+| Qualité audio max | VARCHAR | 50 |
 | Publicité incluse (oui/non) | BOOLEAN | 1 |
-| Nb appareils max simultanés | TINYINT | 2 |
+| Nb appareils max simultanés | INT | 10 |
 | Identifiant abonnement | INT | 10 chiffres |
 | Date début abonnement | DATE | 10 |
 | Date fin abonnement | DATE | 10 |
-| Statut abonnement (actif/expiré/résilié) | VARCHAR | 10 |
+| Statut abonnement (actif/expiré/résilié) | VARCHAR | 50 |
 | Identifiant artiste | INT | 10 chiffres |
-| Nom artiste | VARCHAR | 80 |
+| Nom artiste | VARCHAR | 50 |
 | Identifiant album | INT | 10 chiffres |
-| Titre album | VARCHAR | 120 |
+| Titre album | VARCHAR | 50 |
 | Date sortie album | DATE | 10 |
 | Identifiant genre | INT | 10 chiffres |
-| Nom genre | VARCHAR | 40 |
+| Nom genre | VARCHAR | 50 |
 | Identifiant genre parent (hiérarchie) | INT | 10 chiffres |
 | Identifiant playlist | INT | 10 chiffres |
-| Nom playlist | VARCHAR | 80 |
-| Visibilité playlist (publique/privée) | VARCHAR | 12 |
+| Nom playlist | VARCHAR | 50 |
+| Visibilité playlist (publique/privée) | VARCHAR | 50 |
 | Playlist collaborative (oui/non) | BOOLEAN | 1 |
-| Numéro de piste dans l’album | TINYINT | 2 |
-| Titre de la piste | VARCHAR | 120 |
-| Durée de la piste (secondes) | INT | 5 chiffres |
+| Numéro de piste dans l’album | INT | 10 |
+| Titre de la piste | VARCHAR | 50 |
+| Durée de la piste (secondes) | INT | 10 chiffres |
 | Piste explicite (oui/non) | BOOLEAN | 1 |
 | Date/heure ajout piste en playlist | DATETIME | 19 |
 | Position de la piste dans la playlist | INT | 5 chiffres |
 | Date/heure écoute | DATETIME | 19 |
 | Durée écoutée (secondes) | INT | 5 chiffres |
-| Type d’appareil (mobile/web/desktop…) | VARCHAR | 20 |
+| Type d’appareil (mobile/web/desktop…) | VARCHAR | 50 |
 
 > Remarque : le MCD inclut également certains attributs techniques supplémentaires (par exemple hash_mdp, date_inscription ou statut_compte). Ceux-ci ne sont toutefois pas obligatoires dans la limite de 25 à 35 éléments du dictionnaire.
 
@@ -117,16 +117,17 @@ Fournis donc les règles de gestion et le dictionnaire de données.
 
 # PARTIE 2
 ## MLD :
-- id_utilisateur = (id_utilisateur VARCHAR(50), pseudo VARCHAR(50), email VARCHAR(50), hash_mdp VARCHAR(50), date_inscription VARCHAR(50), statut_compte VARCHAR(50));
-- OFFRE_ABONNEMENT = (id_offre VARCHAR(50), nom_offre VARCHAR(50), prix_mensuel VARCHAR(50), devise VARCHAR(50), qualite_audio_max VARCHAR(50), pub_incluse VARCHAR(50), nb_appareils_max VARCHAR(50));
-- ABONNEMENT = (id_abonnement VARCHAR(50), date_debut VARCHAR(50), date_fin VARCHAR(50), statut_abonnement VARCHAR(50), #id_offre, #id_utilisateur);
-- ARTISTE = (id_artiste VARCHAR(50), nom_artiste VARCHAR(50));
-- ALBUM = (id_album VARCHAR(50), titre_album VARCHAR(50), date_sortie_album VARCHAR(50), #id_artiste);
-- GENRE = (id_genre VARCHAR(50), nom_genre VARCHAR(50), Identifiant_genre_parent_hiérarchie_ VARCHAR(50), #id_genre_1*);
-- PLAYLIST = (id_playlist VARCHAR(50), nom_playlist VARCHAR(50), visibilite VARCHAR(50), collaborative VARCHAR(50), #id_utilisateur);
-- PISTE = (id_album VARCHAR(50), numero_piste VARCHAR(50), titre_piste VARCHAR(50), duree_sec VARCHAR(50), explicite VARCHAR(50), #id_genre, #id_album_1);
-- AJOUTER = (#id_utilisateur, #id_playlist, #(id_album, numero_piste), date_heure_ajout VARCHAR(50), position_ VARCHAR(50));
-- ECOUTER = (#id_utilisateur, #(id_album, numero_piste), date_heure_ecoute VARCHAR(50), duree_ecoutee VARCHAR(50), type_appareil VARCHAR(50));
+id_utilisateur = (id_utilisateur INT, pseudo VARCHAR(50), email VARCHAR(50), hash_mdp VARCHAR(50), date_inscription DATE, statut_compte VARCHAR(50));
+OFFRE_ABONNEMENT = (id_offre INT, nom_offre VARCHAR(50), prix_mensuel DECIMAL(6,2), devise VARCHAR(3), qualite_audio_max VARCHAR(50), pub_incluse LOGICAL, nb_appareils_max INT);
+ABONNEMENT = (id_abonnement INT, date_debut DATE, date_fin DATE, statut_abonnement VARCHAR(50), #id_offre, #id_utilisateur);
+ARTISTE = (id_artiste INT, nom_artiste VARCHAR(50));
+ALBUM = (id_album INT, titre_album VARCHAR(50), date_sortie_album DATE, #id_artiste);
+GENRE = (id_genre INT, nom_genre VARCHAR(50), Identifiant_genre_parent_hiérarchie_ INT, #id_genre_1*);
+PLAYLIST = (id_playlist INT, nom_playlist VARCHAR(50), visibilite INT, collaborative LOGICAL, #id_utilisateur);
+PISTE = (id_album INT, numero_piste VARCHAR(50), titre_piste VARCHAR(50), duree_sec VARCHAR(50), explicite VARCHAR(50), #id_genre, #id_album_1);
+AJOUTER = (#id_utilisateur, #id_playlist, #(id_album, numero_piste), date_heure_ajout VARCHAR(50), position_ VARCHAR(50));
+ECOUTER = (#id_utilisateur, #(id_album, numero_piste), date_heure_ecoute VARCHAR(50), duree_ecoutee VARCHAR(50), type_appareil VARCHAR(50));
+
 
 ---
 
