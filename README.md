@@ -130,7 +130,7 @@ Fournis donc les règles de gestion et le dictionnaire de données.
 
 ---
 
-## V. Scénario d'utilisation
+## Scénario d'utilisation
 **Rôle :** Responsable Marketing de la plateforme de streaming.
 **Objectif :** Analyser les tendances d'écoute pour optimiser les abonnements et proposer des contenus adaptés.
 **Données à extraire :** - Liste des utilisateurs premium actifs.
