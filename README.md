@@ -12,7 +12,7 @@ Notre projet est une plateforme de streaming musical (type Spotify/Deezer/Apple 
 
 ---
 
-## Étape 1 — Analyse des besoins (prompt IA + résultats)
+## Étape 1 —  Analyse des besoins  (prompt IA + résultats)
 
 ### Prompt IA utilisé
 
