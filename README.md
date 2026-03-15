@@ -138,8 +138,6 @@ AJOUTER = (#id_utilisateur, #id_playlist, #(id_album, numero_piste), date_heure_
 
 ECOUTER = (#id_utilisateur, #(id_album, numero_piste), date_heure_ecoute DATETIME, duree_ecoutee INT, type_appareil VARCHAR(50));
 
-
-
 ---
 
 ## Scénario d'utilisation
