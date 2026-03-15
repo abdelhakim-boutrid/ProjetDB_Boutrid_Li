@@ -118,7 +118,7 @@ Fournis donc les règles de gestion et le dictionnaire de données.
 # PARTIE 2
 ## MLD :
 
-id_utilisateur = (id_utilisateur INT, pseudo VARCHAR(50), email VARCHAR(50), hash_mdp VARCHAR(50), date_inscription DATE, statut_compte VARCHAR(50));
+UTILISATEUR = (id_utilisateur INT, pseudo VARCHAR(50), email VARCHAR(50), hash_mdp VARCHAR(50), date_inscription DATE, statut_compte VARCHAR(50));
 
 OFFRE_ABONNEMENT = (id_offre INT, nom_offre VARCHAR(50), prix_mensuel DECIMAL(6,2), devise VARCHAR(3), qualite_audio_max VARCHAR(50), pub_incluse LOGICAL, nb_appareils_max INT);
 
