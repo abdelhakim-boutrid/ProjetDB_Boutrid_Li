@@ -111,7 +111,7 @@ CHECK (position_ > 0);
 
 ALTER TABLE AJOUTER
 ADD CONSTRAINT check_date_ajout
-CHECK (date_heure_ajout <= CURRENT_TIMESTAMP);
+CHECK (date_heure_ajout IS NOT NULL);
 
 
 /* ========================= */
@@ -124,4 +124,4 @@ CHECK (duree_ecoutee >= 0);
 
 ALTER TABLE ECOUTER
 ADD CONSTRAINT check_date_ecoute
-CHECK (date_heure_ecoute <= CURRENT_TIMESTAMP);
+CHECK (date_heure_ecoute IS NOT NULL);
