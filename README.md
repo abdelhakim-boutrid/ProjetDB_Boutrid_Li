@@ -142,10 +142,22 @@ ECOUTER = (#id_utilisateur, #(id_album, numero_piste), date_heure_ecoute DATETIM
 
 ---
 
-## Scénario d'utilisation
-**Rôle :** Responsable Marketing de la plateforme de streaming.
-**Objectif :** Analyser les tendances d'écoute pour optimiser les abonnements et proposer des contenus adaptés.
-**Données à extraire :** - Liste des utilisateurs premium actifs.
-- Statistiques des artistes les plus populaires.
-- Analyse des playlists collaboratives les plus remplies.
-- Historique d'écoute par type d'appareil.
+## Scénario d’utilisation de la base de données
+
+La base de données de la plateforme de streaming musical est utilisée par le service marketing et analyse de données de l’entreprise. Ce service a pour objectif d’analyser l’activité des utilisateurs afin d’améliorer les recommandations musicales, optimiser les offres d’abonnement et identifier les artistes ou contenus les plus populaires.
+
+Dans ce contexte, le responsable marketing souhaite extraire plusieurs informations à partir de la base de données. Il souhaite notamment :
+
+identifier les utilisateurs actifs sur la plateforme ;
+
+analyser les albums et artistes les plus présents dans le catalogue ;
+
+étudier les genres musicaux les plus représentés ;
+
+connaître les playlists créées par les utilisateurs et leur visibilité (publique ou privée) ;
+
+analyser les habitudes d’écoute des utilisateurs, par exemple le type d’appareil utilisé (mobile, web ou desktop) ;
+
+déterminer les pistes les plus ajoutées dans les playlists ;
+
+analyser les abonnements des utilisateurs afin de comprendre la répartition entre les différentes offres proposées par la plateforme.
