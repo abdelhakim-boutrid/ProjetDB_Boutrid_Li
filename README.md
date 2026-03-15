@@ -130,7 +130,7 @@ ALBUM = (id_album INT, titre_album VARCHAR(50), date_sortie_album DATE, #id_arti
 
 GENRE = (id_genre INT, nom_genre VARCHAR(50), id_genre_parent_hierarchie INT, #id_genre_1*);
 
-PLAYLIST = (id_playlist INT, nom_playlist VARCHAR(50), visibilite INT, collaborative LOGICAL, #id_utilisateur);
+PLAYLIST = (id_playlist INT, nom_playlist VARCHAR(50), visibilite VARCHAR(50), collaborative LOGICAL, #id_utilisateur);
 
 PISTE = (id_album INT, numero_piste INT, titre_piste VARCHAR(50), duree_sec INT, explicite INT, #id_genre, #id_album_1);
 
