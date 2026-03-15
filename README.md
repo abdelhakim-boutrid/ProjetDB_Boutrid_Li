@@ -128,7 +128,7 @@ ARTISTE = (id_artiste INT, nom_artiste VARCHAR(50));
 
 ALBUM = (id_album INT, titre_album VARCHAR(50), date_sortie_album DATE, #id_artiste);
 
-GENRE = (id_genre INT, nom_genre VARCHAR(50), id_genre_parent_hierarchie INT, #id_genre_1*);
+GENRE = (id_genre INT, nom_genre VARCHAR(50), id_genre_parent_hierarchie INT, #id_genre_parent);
 
 PLAYLIST = (id_playlist INT, nom_playlist VARCHAR(50), visibilite VARCHAR(50), collaborative LOGICAL, #id_utilisateur);
 
