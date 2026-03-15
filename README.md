@@ -128,16 +128,15 @@ ARTISTE = (id_artiste INT, nom_artiste VARCHAR(50));
 
 ALBUM = (id_album INT, titre_album VARCHAR(50), date_sortie_album DATE, #id_artiste);
 
-GENRE = (id_genre INT, nom_genre VARCHAR(50), Identifiant_genre_parent_hiérarchie_ INT, #id_genre_1*);
+GENRE = (id_genre INT, nom_genre VARCHAR(50), id_genre_parent_hierarchie INT, #id_genre_1*);
 
 PLAYLIST = (id_playlist INT, nom_playlist VARCHAR(50), visibilite INT, collaborative LOGICAL, #id_utilisateur);
 
-PISTE = (id_album INT, numero_piste VARCHAR(50), titre_piste VARCHAR(50), duree_sec VARCHAR(50), explicite VARCHAR(50), #id_genre, #id_album_1);
+PISTE = (id_album INT, numero_piste INT, titre_piste VARCHAR(50), duree_sec INT, explicite INT, #id_genre, #id_album_1);
 
 AJOUTER = (#id_utilisateur, #id_playlist, #(id_album, numero_piste), date_heure_ajout DATETIME, position_ INT);
 
 ECOUTER = (#id_utilisateur, #(id_album, numero_piste), date_heure_ecoute DATETIME, duree_ecoutee INT, type_appareil VARCHAR(50));
-
 
 ---
 
