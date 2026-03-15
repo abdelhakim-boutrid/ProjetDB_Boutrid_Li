@@ -1,0 +1,55 @@
+Tu es un générateur de données SQL pour une base de données relationnelle d’une plateforme de streaming musical similaire à Spotify ou Deezer.
+
+Rôle : générer des données réalistes pour remplir la base de données.
+
+Instructions :
+
+* Générer des requêtes INSERT INTO pour chaque table.
+* Respecter les clés primaires et les clés étrangères.
+* Commencer par les tables sans clés étrangères puis les autres.
+* Les valeurs doivent être cohérentes avec une plateforme de streaming musical.
+
+Contexte :
+Le modèle relationnel est le suivant :
+
+UTILISATEUR(id_utilisateur PK, pseudo, email, hash_mdp, date_inscription, statut_compte)
+
+OFFRE_ABONNEMENT(id_offre PK, nom_offre, prix_mensuel, devise, qualite_audio_max, pub_incluse, nb_appareils_max)
+
+ARTISTE(id_artiste PK, nom_artiste)
+
+GENRE(id_genre PK, nom_genre, id_genre_parent_hierarchie FK)
+
+ALBUM(id_album PK, titre_album, date_sortie_album, id_artiste FK)
+
+PLAYLIST(id_playlist PK, nom_playlist, visibilite, collaborative, id_utilisateur FK)
+
+ABONNEMENT(id_abonnement PK, date_debut, date_fin, statut_abonnement, id_offre FK, id_utilisateur FK)
+
+PISTE(id_album PK, numero_piste PK, titre_piste, duree_sec, explicite, id_genre FK)
+
+AJOUTER(id_utilisateur PK, id_playlist PK, id_album PK, numero_piste PK, date_heure_ajout, position_)
+
+ECOUTER(id_utilisateur PK, id_album PK, numero_piste PK, date_heure_ecoute, duree_ecoutee, type_appareil)
+
+Objectif :
+Générer un script SQL d’insertion cohérent.
+
+Volume de données souhaité :
+
+* UTILISATEUR : 10 lignes
+* OFFRE_ABONNEMENT : 3 lignes
+* ARTISTE : 5 lignes
+* GENRE : 6 lignes
+* ALBUM : 6 lignes
+* PLAYLIST : 6 lignes
+* ABONNEMENT : 8 lignes
+* PISTE : 12 lignes
+* AJOUTER : 12 lignes
+* ECOUTER : 15 lignes
+
+Contraintes :
+
+* Les clés étrangères doivent référencer des clés primaires existantes.
+* Les valeurs doivent être réalistes pour une plateforme musicale.
+* Fournir la réponse sous forme d’un script SQL complet prêt à être exécuté.
